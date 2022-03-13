@@ -1,0 +1,61 @@
+<!-- details.wxml -->
+<view class="page">
+	<view class="details-wrap">
+		<view class="item">
+			<view class="item-title">开始时间</view>
+			<view class="item-content">2018-06-30 14:30</view>
+		</view>
+		<view class="item">
+			<view class="item-title">结束时间</view>
+			<view class="item-content">2018-06-30 16:30</view>
+		</view>
+		<view class="item">
+			<view class="item-title">房间人数</view>
+			<view class="item-content">4</view>
+		</view>
+		<view class="item">
+			<view class="item-title">会议室</view>
+			<view class="item-content" style="color: #a3a3a3">B216</view>
+		</view>
+	</view>
+	<view class="details-wrap" style="margin-top: 50rpx;">
+		<view class="item">
+			<view class="item-title">会议主题</view>
+			<view class="item-content" style="color: #a3a3a3">人力资源组会</view>
+		</view>
+		<view class="item">
+			<view class="item-title">会议说明</view>
+			<view class="item-content" style="color: #a3a3a3">恭喜陆建华升职</view>
+		</view>
+		<view class="item">
+			<view class="item-title">会议主持</view>
+			<view class="item-content" style="color: #a3a3a3">侯晓妍</view>
+		</view>
+		<view class="item-participant">
+			<view class="item-title">参会人</view>
+			<view class="p-list">
+				<view class="p-list-item">
+          <image class="li-image" src='../../images/1.jpg'></image>
+					<view class="li-name">侯晓妍</view>
+				</view>
+				<view class="p-list-item">
+					<image class="li-image" src='../../images/2.jpg'></image>
+					<view class="li-name">张艺兴</view>
+				</view>
+				<view class="p-list-item">
+					<image class="li-image" src='../../images/3.jpg'></image>
+					<view class="li-name">陆建华</view>
+				</view>
+				<view class="p-list-item">
+					<image class="li-image" src='../../images/4.jpg'></image>
+					<view class="li-name">刘伦豪</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="cancel-wrap">
+		<button class="jumper">编辑会议</button>
+    <button class="warn" class="cancel">取消会议</button>
+	</view>
+</view>
+

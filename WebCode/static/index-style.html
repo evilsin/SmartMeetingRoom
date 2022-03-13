@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <!-- Your Page Title Here -->
+    <title>会议室前端</title>
+    <!--  Disable screen scaling-->
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0'>
+    <meta name='author' content='HighHay.com digital agency'>
+    <meta name='description' content='Timex, a responsive Coming Soon Template'>
+    <!-- Load webfonts -->
+    <link rel='stylesheet' href='fonts/montserrat/stylesheet.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='fonts/opensans/stylesheet.css' type='text/css' media='all'>
+
+    <!-- Load normalize css -->
+    <link rel='stylesheet' type='text/css' href='css/normalize.css' />
+    <!-- Load css -->
+    <link rel='stylesheet' type='text/css' href='css/foundation.min.css' />
+
+
+    <style>
+        body, header, h2, h3, h4, h5,p{
+            font-family: 'montserrat_bold';
+        }
+        body{
+            background: #ffffff;
+          /*  background: url('imgs/会议室1.png');*/
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .all{
+
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left:0;
+        }
+        header{
+            width: 100%;
+            position: relative;
+        }
+        img{
+            width: 100%;
+        }
+        header h2{
+
+            background: rgba(51, 51, 51, 0.83);
+            max-width: 65rem;
+            margin: auto;
+            font-size: 1.75em;
+            font-family: 'OpenSans';
+            padding-top: 0.45em;
+            padding-bottom: 0.5em;
+            padding-left: 1em;
+            padding-right: 1em;
+            color: #f4f5f8;
+            display: block;
+
+
+            letter-spacing: -0.1rem;
+            -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),
+            0 2px 2px rgba(0,0,0,0.2),
+            0 0 4px 1px rgba(0,0,0,0.1);
+            -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),
+            0 2px 2px rgba(0,0,0,0.2),
+            0 0 4px 1px rgba(0,0,0,0.1);
+            -ms-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),
+            0 2px 2px rgba(0,0,0,0.2),
+            0 0 4px 1px rgba(0,0,0,0.1);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),
+            0 2px 2px rgba(0,0,0,0.2),
+            0 0 4px 1px rgba(0,0,0,0.1);
+
+        }
+        .select{
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            color: #fff;
+            font-family: 'OpenSans';
+
+            letter-spacing: -0.1rem;
+            /*         font-family: 'OpenSans';*/
+        }
+        .aresp{
+        }
+        span.marked{
+            color: #fff;
+            font-family: 'OpenSans';
+        }
+        .d-window{
+            position: absolute;
+            width: 100%;
+            top: 60px;
+            /*
+                    top:50%;
+                    margin-top: -13.6rem;
+            */
+
+        }
+        .d-window .cont{
+            max-width: 65rem;
+            margin: auto;
+            position: relative;
+            padding-bottom: 2rem;
+            /*padding-top: 2rem;*/
+            background: rgba(47, 47, 47, 0.4);
+
+            -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),
+            0 2px 2px rgba(0,0,0,0.2),
+            0 0 4px 1px rgba(0,0,0,0.1);
+            -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),
+            0 2px 2px rgba(0,0,0,0.2),
+            0 0 4px 1px rgba(0,0,0,0.1);
+            -ms-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),
+            0 2px 2px rgba(0,0,0,0.2),
+            0 0 4px 1px rgba(0,0,0,0.1);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),
+            0 2px 2px rgba(0,0,0,0.2),
+            0 0 4px 1px rgba(0,0,0,0.1);
+        }
+        ul, li{
+            list-style: none;
+        }
+        ul li{
+            margin-bottom: 1rem;
+        }
+        ul li a{
+            box-sizing: border-box;
+            display: block;
+            padding: 0.7rem;
+            background: #fff;
+
+            -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),
+            0 2px 2px rgba(0,0,0,0.2),
+            0 0 4px 1px rgba(0,0,0,0.1);
+            -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),
+            0 2px 2px rgba(0,0,0,0.2),
+            0 0 4px 1px rgba(0,0,0,0.1);
+            -ms-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),
+            0 2px 2px rgba(0,0,0,0.2),
+            0 0 4px 1px rgba(0,0,0,0.1);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),
+            0 2px 2px rgba(0,0,0,0.2),
+            0 0 4px 1px rgba(0,0,0,0.1);
+            border-radius: 0.2rem;
+
+        }
+        ul li a h4{
+            font-family: 'OpenSans';
+            color: #575d69;
+            font-size: 1em;
+            padding-top: 0.5rem;
+            text-transform: uppercase;
+
+            letter-spacing: -1px;
+        }
+        ul li a{
+            -ms-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+        ul li a:hover{
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            -moz-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+        a img {
+            border: solid 1px #ccc;
+        }
+        footer{
+            text-align: center;
+            color:#333;
+            font-family: 'OpenSans';
+            letter-spacing: -1px;
+        }
+        footer a:visited,
+        footer a:hover,
+        footer a{
+            color:#0f305c;
+        }
+        @media screen and (max-width: 640px) {
+            header h2{
+                font-size: 1.2rem;
+            }
+            .d-window{
+                position: absolute;
+                width: 100%;
+                top:0;
+                margin-top: 0;
+
+            }
+            .select{
+                font-size: 1.2rem;
+            }
+            .column, .columns {
+                position: relative;
+                padding-left: 0.7rem;
+                padding-right: 0.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<section class='all'>
+
+    <div class='d-window'>
+        <div class='cont'>
+
+            <header class=' text-center'>
+                <h2><span class='marked'>本次会议签到情况</span></h2>
+            </header>
+            <!--<div><h4><a href="qianduanyuding.html">实时预定</a></h4></div>-->
+            <!--<div><h4><a href="first.html">刷脸签到</a></h4></div>-->
+            <!--<h3 class='text-center select' >- 上午 - </h3>-->
+
+            <ul class='row'>
+                <li class='columns medium-6 small-6'>
+                    <div>
+                        <form id="mail-subscription" class="form magic send_email_form" method="get" action="ajaxserver/serverfile.php">
+                            <!--<p class="invite">Please, write your email below to stay in touch with us :</p>-->
+                            <div class="fields clearfix">
+                                <div class="buttons">
+                                    <button >侯晓妍</button>
+                                    <button >已到</button>
+                                </div>
+                                    <!--<input id="reg-email" class="email_f"  name="email" type="email" data-validation-type="email"></div>-->
+                                <!--<div class="buttons">-->
+                                    <!--<button >已到</button>-->
+                                <!--</div>-->
+                            </div>
+                            <div class="fields clearfix">
+                                <div class="input">
+                                    <button >陆建华</button>
+                                    <button >已到</button>
+                                    <!--<input id="reg-email" class="email_f"  name="email" type="email" data-validation-type="email"></div>-->
+
+                            </div>
+                            <div class="fields clearfix">
+                                <div class="input">
+                                    <button >张亦昕  </button>
+                                    <button >未到</button>
+                                    <!--<input id="reg-email" class="email_f"  name="email" type="email" data-validation-type="email"></div>-->
+
+                            </div>
+
+                            <p class="email-ok invisible"><strong>Thank you</strong> for your subscription. We will inform you.</p>
+                        </form>
+                    </div>
+                </li>
+                <!--<li class='columns medium-6 small-6'>-->
+                    <!--<a href='index-style.html'>-->
+                        <!--<div>-->
+                            <!--<img src='imgs/2.png' alt='Video'>-->
+                        <!--</div>-->
+                        <!--<h4 class='text-center'>查看详情</h4>-->
+                    <!--</a>-->
+                <!--</li>-->
+
+                <!--<h3 class='text-center select' >- 下午 -</h3>-->
+                <!--<ul class="row">-->
+                    <!--<li class='columns medium-6 small-6'>-->
+                        <!--<a href='index-style1.html' >-->
+                            <!--<div>-->
+                                <!--<img src='imgs/3.png' alt='Custom'>-->
+                            <!--</div>-->
+                            <!--<h4 class='text-center'>查看详情</h4>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li class='columns medium-6 small-6'>-->
+                        <!--<a href='index-style2.html' >-->
+                            <!--<div>-->
+                                <!--<img src='imgs/4.png' alt='Custom'>-->
+                            <!--</div>-->
+                            <!--<h4 class='text-center'>查看详情</h4>-->
+                        <!--</a>-->
+                <!--</ul>-->
+
+                <!--<footer>-->
+                    <!--Copyright2019 FTD HHU@智会-->
+                <!--</footer>-->
+        <!--</div>-->
+
+
+    </div>
+</section>
+
+</body>
+</html>

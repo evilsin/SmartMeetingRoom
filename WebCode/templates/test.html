@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <title>会议预定</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="static/css/templatemo_main.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+  <link href="static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/css/bootstrap-reset.css" rel="stylesheet">
+
+  <link href="static/css/font-awesome.css" rel="stylesheet">
+  <link href="static/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/main.css">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<!--
+Dashboard Template
+http://www.templatemo.com/preview/templatemo_415_dashboard
+-->
+</head>
+<body class="has-js">
+div#a{
+
+width:1105px;
+height:500px;
+margin:0 auto;
+border:0px solid;
+
+}
+
+<div id ="a">
+<canvas id="canvas" width="1105" height="500"></canvas>
+</div>
+<div id="down">
+<center>
+<button onclick="restuya()">清除</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="saveTu()" id="btn">保存</button>
+</center>
+</div>
+
+
+
+
+
+<script type="text/javascript"> 
+document.getElementById("btn").disabled=true;
+// 获取 canvas 对象  
+var canvas = document.getElementById('canvas');  
+// 获取绘图环境  
+var ctx = canvas.getContext('2d');  
+
+
+var last = null;  
+
+
+// 文件对象  
+var filedata = null;  
+
+
+// 鼠标按下  
+canvas.onmousedown = function(){ 
+    // 在鼠标按下后触发鼠标移动事件  
+    canvas.onmousemove = move;  
+    document.getElementById("btn").disabled=false;
+}  
+
+
+// 鼠标抬起取消鼠标移动的事件  
+canvas.onmouseup = function(){  
+    canvas.onmousemove = null;    
+    last = null;  
+}  
+
+
+// 鼠标移出画布时 移动事件也要取消。  
+canvas.onmouseout = function(){  
+    canvas.onmousemove = null;  
+    last = null;  
+}  
+
+
+// 鼠标移动函数  
+function move(e){  
+    // console.log(e.offsetX);  
+    if(last != null){  
+        ctx.beginPath();  
+        ctx.moveTo(last[0],last[1]);  
+        ctx.lineTo(e.offsetX,e.offsetY);  
+        ctx.stroke();  
+    }         
+    // 第一次触发这个函数，只做一件事，把当前 鼠标的 x , y 的位置记录下来  
+    // 做下一次 线段的 起始点。  
+    last = [e.offsetX,e.offsetY];  
+
+
+}  
+
+
+// 重新在画  
+function restuya(){  
+document.getElementById("btn").disabled=true;
+    ctx.clearRect(0,0,canvas.width,canvas.height);  
+    drawImg(filedata);  
+    
+}  
+
+
+// 绘制图片  
+function drawImg(filedata){  
+
+
+    var readFile = new FileReader();  
+
+
+    readFile.readAsDataURL(filedata);  
+
+
+    // 图片读取成功  
+    readFile.onload = function(){  
+
+
+        var Img = new Image();  
+        Img.src = this.result;  
+
+
+        Img.onload = function(){  
+            // 根据 图片的 宽高 来 设置canvas 宽和高   
+            canvas.width = Img.width;  
+            canvas.height = Img.height;  
+            ctx.drawImage(Img,0,0);  
+        }  
+    }  
+}  
+
+
+function saveTu(){
+var saveImage = canvas.toDataURL('image/png');
+var b64 = saveImage.substring(22);
+
+
+$.ajax({
+url: "http://localhost:8080/jiemian/saveImg",
+type:'post',
+data: { pp: b64},
+success:function ()  
+        {  
+        alert('保存成功');  
+        }  
+});  
+}
+
+</body>
+</html>

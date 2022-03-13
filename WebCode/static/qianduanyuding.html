@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>智能会议室管理系统</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/templatemo_main.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker5.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/yuding.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+    <style>
+        body{
+            background: url('imgs/7.jpg');
+        }
+    </style>
+</head>
+<!--<body class="has-js">-->
+<!--<section id="container" class="">-->
+    <!--&lt;!&ndash;header start&ndash;&gt;-->
+    <!--<header class="header white-bg">-->
+        <!--<div class="sidebar-toggle-box">-->
+            <!--<div data-original-title="展开菜单" data-placement="right" class="icon-reorder tooltips"></div>-->
+        <!--</div>-->
+        <!--logo start-->
+        <!--<a href="#" class="logo"><span><b>智能会议室管理系统</b></span></a>-->
+        <!--logo end-->
+
+        <div class="nav notify-row" id="top_menu">
+
+        </div>
+        <div class="top-nav ">
+            <!--search & user info start-->
+            <ul class="nav pull-right top-menu">
+                <li>
+                    <!-- <input type="text" class="form-control search" placeholder="Search"> -->
+                </li>
+                <!-- user login dropdown start登录用户个人下拉框-->
+                <!--<li class="dropdown">-->
+                    <!--<a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+
+                        <!--&lt;!&ndash;<img class="headerImage" style="height:30px;width:30px;"  src="imgs/hh.png"  >&ndash;&gt;-->
+
+
+                        <!--&lt;!&ndash;<span class="username">侯晓妍</span>&ndash;&gt;-->
+                        <!--<b class="caret"></b>-->
+                    <!--</a>-->
+                    <!--<ul class="dropdown-menu extended logout">-->
+                        <!--<div class="log-arrow-up"></div>-->
+                        <!--<li><a href=""><i class=" icon-envelope"></i>账号</a></li>-->
+                        <!--<li><a href=""><i class="icon-key"></i> 密码</a></li>-->
+                        <!--<li style="display:none"><a href=""><i class="icon-user"></i> 头像</a></li>-->
+                        <!--<li><a href=""><i class="icon-signout"></i> 退出</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!-- user login dropdown end -->
+            </ul>
+            <!--search & user info end-->
+        </div>
+
+    </header>
+
+    <!--<aside>-->
+        <!--<div id="sidebar" class="nav-collapse ">-->
+            <!--&lt;!&ndash; sidebar menu start&ndash;&gt;-->
+            <!--<ul class="sidebar-menu">-->
+                <!--<li class="sub-menu">-->
+                    <!--<a class="active" href="index.html">-->
+                        <!--<i class="icon-laptop"></i>-->
+                        <!--&lt;!&ndash;<span>首&nbsp;&nbsp;&nbsp;&nbsp;页</span>&ndash;&gt;-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li class="sub-menu ">-->
+                    <!--<a href="meeting.html" class="">-->
+                        <!--<i class="fa fa-bank"></i>-->
+                        <!--&lt;!&ndash;<span>会议室预览</span>&ndash;&gt;-->
+                    <!--</a>-->
+                <!--</li>-->
+
+                <!--<li class="sub-menu  active">-->
+                    <!--<a href="yuding.html" class="">-->
+                        <!--<i class="fa fa-desktop"></i>-->
+                        <!--&lt;!&ndash;<span>会议预定</span>&ndash;&gt;-->
+                    <!--</a>-->
+                <!--</li>-->
+
+                <!--<li class="sub-menu ">-->
+                    <!--<a href="information.html" class="">-->
+                        <!--<i class="fa fa-user"></i>-->
+                        <!--&lt;!&ndash;<span>个人资料</span>&ndash;&gt;-->
+                    <!--</a>-->
+                <!--</li>-->
+
+                <!--&lt;!&ndash;<li><a href="javascript:" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>退出系统</a></li>&ndash;&gt;-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</aside>-->
+
+    <section id="main-content" class="">
+        <section class="wrapper">
+            <div class="template-page-wrapper">
+                <div class="templatemo-content-wrapper">
+                    <div class="templatemo-content1">
+                        <div class="margin-bottom-30">
+                            <div class="leftDiv">
+                                <div class="layui-container">
+                                    <div class="layui-row">
+                                        <div class="layui-col-md12">
+                                            <!-- <blockquote class="layui-elem-quote">基于layui的日历记事本</blockquote> -->
+                                            <div class="layui-inline" id="test-n2" ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--             <div class='input-group date' >
+                                                <input type='text' class="form-control" id='datetimepicker6'placeholder="开始时间">
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                <input type='text' class="form-control" id='datetimepicker7'placeholder="结束时间">
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                              </div> -->
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">你确认退出吗？</h4>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="login.html" class="btn btn-primary">是</a>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">否</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--<footer class="templatemo-footer">-->
+            <!--<div class="templatemo-copyright">-->
+                <!--&lt;!&ndash;<p>2018-2019智能会议室管理系统</p>&ndash;&gt;-->
+            <!--</div>-->
+        <!--</footer>-->
+    </section>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo_script.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/moment-with-locales5.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script>
+        layui.use(['layer', 'form','jquery','laydate'], function() {
+            var layer = layui.layer,
+                $ = layui.jquery,
+                laydate = layui.laydate,
+                form = layui.form;
+            //定义json
+            var  data={};
+            var new_date = new Date();
+            loding_date(new_date ,data);
+
+            //日历插件调用方法
+            function loding_date(date_value,data){
+                laydate.render({
+                    elem: '#test-n2'
+                    ,type: 'date'
+                    ,theme: 'grid'
+                    ,max: '2099-06-16 23:59:59'
+                    ,position: 'static'
+                    ,range: false
+                    ,value:date_value
+                    ,calendar: true
+                    ,btns:false
+                    ,done: function(value, date, endDate){
+                        console.log(value); //得到日期生成的值，如：2017-08-18
+                        console.log(date); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+                        console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+                        //layer.msg(value)
+
+                        //调用弹出层方法
+                        date_chose(value,data);
+
+                    }
+                    , mark:data//重要json！
+
+                });
+            }
+
+            //获取隐藏的弹出层内容
+            var date_choebox = $('.date_box').html();
+
+            //定义弹出层方法
+            function date_chose(obj_date,data){
+                var index = layer.open({
+                    type: 1,
+                    offset:"rb",
+                    skin: 'layui-layer-rim', //加上边框
+                    title:'添加记录',
+                    area: ['500px', '100%'], //宽高
+                    btn:['确定','撤销','取消'],
+                    content: '<div class="text_box">'+
+                        '<form class="layui-form" action="">'+
+                        '<div class="layui-form-item"><label for="text_book" class="layui-form-label">会议主题</label><div class="layui-input-block"><input type="text" name="title1" id="text_book" required  lay-verify="required" placeholder="请输入会议主题" autocomplete="off" class="layui-input"></div></div>'+
+                        '<div class="layui-form-item"><label  class="layui-form-label">预定时间</label><div class="layui-input-block">'+
+                        ' <div class="input-group date">'+
+                        '<input type="text" class="form-control" id="datetimepicker6" placeholder="开始时间"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>'+
+                        '<input type="text" class="form-control" style="margin-left:4px;" id="datetimepicker7" placeholder="结束时间"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>'+
+                        '</div></div></div>'+
+                        '<div class="layui-form-item"><label for="canhuipeople" class="layui-form-label">参会人员</label><div class="layui-input-block"><input type="text" name="title1" id="canhuipeople" required  lay-verify="required" placeholder="请输入参会人员" autocomplete="off" class="layui-input"></div></div>'+
+                        '<div class="layui-form-item"><label  class="layui-form-label">会场需要</label><div class="layui-input-block">'+
+                        '<input type="radio" name="canhuineed" value="白板" title="白板" check>白板'+
+                        '<input type="radio" name="canhuineed" value="投影仪" title="投影仪">投影仪'+
+                        '<input type="radio" name="canhuineed" value="空调" title="空调">空调'+
+                        '</div></div>'+
+                        '<div class="layui-form-item"><label class="layui-form-label">参会人数</label><div class="layui-input-block">'+
+                        '<input type="radio" name="canhuinum" value="20" title="20">20人以下'+
+                        '<input type="radio" name="canhuinum" value="50" title="50">10人~50人以下'+
+                        '<input type="radio" name="canhuinum" value="100" title="100">50人~100人'+
+                        '</div></div>'+
+                        '<div class="layui-form-item"><label class="layui-form-label">智能匹配会议室</label><div class="layui-input-block">'+
+                        ' <select name="interest" lay-filter="aihao">'+
+                        ' <option value="0">智能匹配会议室0</option>'+
+                        ' <option value="1">智能匹配会议室1</option>'+
+                        ' <option value="2">智能匹配会议室2</option>'+
+                        ' <option value="3">智能匹配会议室3</option>'+
+                        ' <option value="4">智能匹配会议室4</option>'+
+                        ' <option value="5">智能匹配会议室5</option>'+
+                        ' </select>'+
+                        '</div></div>'+
+                        '</form>'+
+                        '</div>'
+                    ,success:function(){
+                        $('#text_book').val(data[obj_date]);
+                        setFAte();
+                    }
+                    ,yes:function (){
+                        //调用添加/编辑标注方法
+                        if($('#text_book').val()!=''){
+                            chose_moban(obj_date,data);
+                            layer.close(index);
+                        }else{
+                            layer.msg('不能为空', {icon: 2});
+                        }
+
+                    },btn2:function (){
+                        chexiao(obj_date,data);
+                    }
+                });
+            }
+
+            //定义添加/编辑标注方法
+            function chose_moban(obj_date,markJson){
+                //获取弹出层val
+                var chose_moban_val = $('#text_book').val();
+
+                $('#test-n2').html('');//重要！由于插件是嵌套指定容器，再次调用前需要清空原日历控件
+                //添加属性
+                // markJson[obj_date] = chose_moban_val;
+                //console.log(JSON.stringify(markJson));
+
+                //再次调用日历控件，
+                loding_date(obj_date,markJson);//重要！，再标注一个日期后会刷新当前日期变为初始值，所以必须调用当前选定日期。
+            }
+            //撤销选择
+            function chexiao(obj_date,markJson){
+                //删除指定日期标注
+                delete markJson[obj_date];
+                console.log(JSON.stringify(markJson));
+                //原理同添加一致
+                $('#test-n2').html('');
+                loding_date(obj_date,markJson);
+            }
+        });
+        $(function(){
+            $('#datetimepicker6').datetimepicker({locale: 'zh-cn', format: 'LT'});
+            $('#datetimepicker7').datetimepicker({locale: 'zh-cn', format: 'LT'});
+            $("#datetimepicker6").on("dp.change",function (e) {
+                $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+            });
+            $("#datetimepicker7").on("dp.change",function (e) {
+                $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+            });
+        })
+        function setFAte(){
+            $('#datetimepicker6').datetimepicker({locale: 'zh-cn', format: 'LT'});
+            $('#datetimepicker7').datetimepicker({locale: 'zh-cn', format: 'LT'});
+            $("#datetimepicker6").on("dp.change",function (e) {
+                $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+            });
+            $("#datetimepicker7").on("dp.change",function (e) {
+                $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+            });
+        }
+    </script>
+    <!--common script for all pages-->
+    <script src="js/new/common-scripts.js"></script>
+</section>
+</body>
+</html>

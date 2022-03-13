@@ -1,0 +1,33 @@
+<view class="page">
+	<view class="user">
+    <view>
+      <image class="user-head" src="../../images/4.png"></image>
+    </view>
+		<view class="user-wrap">
+			<view class="item">
+				<view class="item-title">工号</view>
+				<view class="item-content">1662410319</view>
+			</view>
+      <view class="item">
+				<view class="item-title">姓名</view>
+				<view class="item-content">陆建华</view>
+			</view>
+			<view class="item">
+				<view class="item-title">电话</view>
+				<view class="item-content">18351209293</view>
+			</view>
+			<view class="item">
+				<view class="item-title">部门</view>
+				<view class="item-content">人力资源</view>
+			</view>
+			<view class="item">
+				<view class="item-title">所在公司</view>
+				<view class="item-content">**公司</view>
+			</view>
+		</view>
+		<view class="register-wrap">
+      <button class="jumper">切换账号</button>
+			<button class="warn" class="register" bindtap="loginOut">退出登录</button>
+		</view>
+	</view>
+</view>

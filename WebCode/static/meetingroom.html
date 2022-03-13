@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<link rel="stylesheet" href="css/amazeui.min.css">
+	<link rel="stylesheet" href="css/admin.css">
+	<link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+<div class="am-cf admin-main">
+	<!-- content start -->
+	<div class="admin-content">
+		<div class="admin-content-body">
+			<div class="am-cf am-padding am-padding-bottom-0">
+				<div class="am-fl am-cf">
+					<strong class="am-text-primary am-text-lg"> </strong><small>
+					<i class="icon-home"></i> &gt; 首页 &gt; 会议室信息</small>
+				</div>
+			</div>
+			<hr>
+			<div class="container">
+				<div class="am-g">
+					<div class="am-u-sm-12 am-u-md-6">
+						<div class="am-btn-toolbar">
+							<div class="am-btn-group am-btn-group-xs">
+								<button type="button" class="am-btn am-btn-default btnAdd">
+									<span class="icon-plus"></span> 新增
+								</button>
+
+								<button type="button" class="am-btn am-btn-default" id="btnremove" onclick="delAll()">
+									<span class="icon-trash"></span> 删除
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="am-u-sm-12 am-u-md-3">
+
+						<select id="selDepart" data-am-selected="{btnSize: 'sm'}" style="display: none;">
+							<option value="0">
+								请选择部门
+							</option>
+
+							<option value="14">
+								研发部
+							</option>
+
+							<option value="22">
+								市场部
+							</option>
+
+						</select>
+
+							<div class="am-selected-content am-dropdown-content">
+								<h2 class="am-selected-header">
+									<span class="am-icon-chevron-left">返回</span>
+								</h2>
+								<ul class="am-selected-list">
+
+								</ul>
+								<div class="am-selected-hint"></div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="am-g" style="margin-top: -30px;">
+					<div class="am-u-sm-12">
+						<form class="am-form" action="user/delAll.action">
+							<table class="am-table am-table-striped am-table-hover table-main">
+								<thead>
+								<tr>
+									<!--<th class="table-check">-->
+										<!--<input id="chkAll" type="checkbox">-->
+									<!--</th>-->
+									<th class="table-id">
+										选择
+									</th>
+									<th>
+										会议室编号
+									</th>
+                                    <th>
+                                        会场规模
+                                    </th>
+
+
+									<!--<th>-->
+										<!--硬件设施-->
+									<!--</th>-->
+
+									<th class="table-set">
+										硬件设施
+									</th>
+									<th class="table-set">
+										操作
+									</th>
+								</tr>
+								</thead>
+								<tbody id="tUser">
+								<tr>
+									<td><input name="ids" value="1" type="checkbox"></td>
+									<td>0001</td>
+                                    <td>40-50人</td>
+									<td>
+									白板 投影仪 空调
+                                    </td>
+
+									<td>
+										<div class="am-btn-toolbar">
+											<div class="am-btn-group am-btn-group-xs"><button type="button" class="am-btn am-btn-default am-btn-xs am-text-secondary btnEdit"><span class="am-icon-pencil-square-o"></span> 编辑</button><button type="button" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="delUser(1,1)"><span class="am-icon-trash-o"></span> 删除</button></div>
+										</div>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- content end -->
+	</div>
+</div>
+
+<!--[if lt IE 9]>
+<script src="js/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="js/jquery-1.11.3.min.js"></script>
+<!--<![endif]-->
+<script type="text/javascript" src="myplugs/js/plugs.js"></script>
+<script>
+    $(function() {
+        $(".btnAdd").click(function() {
+            $.jq_Panel({
+                title: "添加会议室",
+                url: "addroom.html",
+                iframeWidth: 700,
+                iframeHeight: 300,
+            });
+        });
+
+        $(".btnEdit").click(function() {
+            $.jq_Panel({
+                title: "编辑员工信息",
+                url: "addroom.html",
+                iframeWidth: 700,
+                iframeHeight: 300,
+            });
+
+        });
+
+    });
+</script>
+</body>
+
+</html>

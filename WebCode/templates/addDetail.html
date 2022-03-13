@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="/static/css/amazeui.min.css">
+    <link rel="stylesheet" href="/static/css/admin.css">
+    <link rel="stylesheet" href="/static/css/app.css">
+    <style>
+        .admin-main {
+            padding-top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="am-cf admin-main">
+    <!-- content start -->
+    <div class="admin-content">
+        <div class="admin-content-body">
+            <div class="am-g">
+                <form class="am-form am-form-horizontal" action=" " method="post"
+                      style="padding-top: 30px;">
+                    <input value="504" name="roleId" type="hidden">
+                    <div class="am-form-group">
+                        <label for="review-status" class="am-u-sm-3 am-form-label">
+                            审核状态
+                        </label>
+                        <div class="am-u-sm-9" style="line-height: 30px;">
+                            <select name="review" required>
+                                <option value="待审核">
+                                    待审核
+                                </option>
+
+                                <option value="通过">
+                                    通过
+                                </option>
+                                <option value="不通过">
+                                    不通过
+                                </option>
+
+                            </select>
+
+                            <!--<small>审核状态</small>-->
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
+                        <div class="am-u-sm-9 am-u-sm-push-3">
+                            <input id="addRole" class="am-btn am-btn-success btnClose" value="编辑" type="submit">
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $(".btnedit").click(function () {
+            $.jq_Panel({
+                title: "修改部门",
+                iframeWidth: 500,
+                iframeHeight: 300,
+                url: "addDepart.html"
+            });
+        });
+        $(".btnAdd").click(function () {
+
+            $.jq_Panel({
+                title: "添加部门",
+                iframeWidth: 500,
+                iframeHeight: 300,
+                url: "addDepart.html"
+            });
+        });
+    });
+</script>
+</body>
+
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/upload.js"></script>
+
+<script type="text/javascript">
+    var dragImgUpload = new DragImgUpload("#drop_area", {
+        callback: function (files) {
+            //回调函数，可以传递给后台等等
+            var file = files[0];
+            console.log(file.name);
+        }
+    })
+</script>
+
+<script>
+    $(function () {
+        $(".btnClose").click(function () {
+            this.close;
+        });
+    });
+</script>
+
+
+</html>

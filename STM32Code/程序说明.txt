@@ -1,0 +1,22 @@
+程序说明：
+
+简介：
+  本例程与web端结合，实现WiFi无线开关门禁的功能。
+
+网络连接模型如下：
+ 服务器<--有线或无线-->路由<--无线-->开发板
+
+使用TCP协议传输数据，服务端作为TCP Client，开发板作为TCP Server。
+
+操作步骤：
+
+  打开demo程序后，在MDK左侧的工程栏找到“Application\fire_demo.c”文件
+  文件头部有SSID_NAME及SSID_KEY常量，把它们的字符串内容改成路由名及密码即可：
+
+	//路由名
+	const char SSID_NAME[] = "路由名";
+	//路由密码
+	const char SSID_KEY[] = "密码";
+  注1：
+--其中“TCP server ip:192.168.1.103, port:20000”中的信息为开发板的IP及使用的TCP端口，不同环境下该参数不一样
+

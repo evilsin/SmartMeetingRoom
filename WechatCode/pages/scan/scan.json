@@ -1,0 +1,7 @@
+{
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "会议室排期",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+}
